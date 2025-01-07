@@ -20,23 +20,21 @@ import ida from "../assets/images/ida.png";
 
 <MainLayout title="Om os">
   <article class="px-sm md:px-[0px]">
-    <section class="md:py-lg py-xs grid grid-cols-1 md:grid-cols-2  mx-xs md:mx-2xl">
+    <section class="md:py-lg py-xs grid grid-cols-1 md:grid-cols-2 mx-xs md:mx-2xl">
       <div class="flex flex-col items-center md:items-start">
         <h1 class="hidden md:flex text-red-700">Bag om<br>Period.</h1>
         <h1 class="md:hidden text-red-700">Bag om Period.</h1>
-        <Image src={cirkelFotos} class="block lg:hidden" alt="tre portræt billeder"></Image>
+        <h3 class="titel text-center md:text-left">
+          En idé, og masser af hårdt arbejde - sådan blev vores eksamensprojekt til virkelighed!
+        </h3>
+        <Image src={cirkelFotos} class="block md:hidden" alt="tre portræt billeder"></Image>
       </div>
-    <div class="hidden lg:block">
-        <div class="flex flex-row gap-m md:gap-none justify-between   mx-auto pb-sm">
-          <Image class="shadow-dropblue h-[110px] w-[110px] md:h-[190px] md:w-[190px] point1 rounded-full object-cover md:transition-all md:hover:scale-105" src={selma} alt="Selma"></Image>
-          <Image class="shadow-dropblue h-[110px] w-[110px] md:h-[190px] md:w-[190px] point2 mt-3xl  rounded-full object-cover md:transition-all md:hover:scale-105" src={ida} alt="Ida"></Image>
-          <Image class=" shadow-dropblue h-[110px] w-[110px] md:h-[190px] md:w-[190px] point3 rounded-full object-cover md:transition-all md:hover:scale-105" src={laura} alt="Laura"></Image>
+    <div class="hidden md:block">
+        <div class="flex flex-col items-center lg:flex-row gap-m md:gap-s justify-between mx-auto pb-sm">
+          <Image class="shadow-dropblue h-[140px] w-[140px] lg:h-[190px] lg:w-[190px] point1 rounded-full object-cover md:transition-all md:hover:scale-105" src={selma} alt="Selma"></Image>
+          <Image class="shadow-dropblue h-[140px] w-[140px] lg:h-[190px] lg:w-[190px] point2 lg:mt-3xl mt-none rounded-full object-cover md:transition-all md:hover:scale-105" src={ida} alt="Ida"></Image>
+          <Image class=" shadow-dropblue h-[140px] w-[140px] lg:h-[190px] lg:w-[190px] point3 rounded-full object-cover md:transition-all md:hover:scale-105" src={laura} alt="Laura"></Image>
         </div>
-    </div>
-    <div>
-       <h3 class="mx-auto md:mx-2xl max-w-lg titel text-center md:text-left">
-      En idé, og masser af hårdt arbejde - sådan blev vores eksamensprojekt til virkelighed!
-    </h3>
     </div>
     </section>
    
