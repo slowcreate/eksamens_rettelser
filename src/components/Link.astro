@@ -1,0 +1,29 @@
+---
+const { href="#", target="_self"} = Astro.props; 
+---
+<a href={href} class="w-fit" target={target}><h6><slot /></h6></a>
+
+<style>
+    a {
+  background: linear-gradient(
+      to right,
+      rgb(255, 255, 255, 0),
+      rgb(255, 255, 255, 0)
+    ),
+    linear-gradient(
+      to right,
+      rgb(183, 189, 239, 1),
+      rgb(241, 126, 132, 1),
+      rgb(245, 193, 35)
+    );
+  background-size: 100% 0.1em, 0 0.1em;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+}
+
+a:hover,
+:focus {
+  background-size: 0 0.2em, 100% 0.2em;
+}
+</style>

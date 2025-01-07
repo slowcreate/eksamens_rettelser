@@ -1,0 +1,219 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Steps from "../components/Steps.astro";
+import { Image } from 'astro:assets';
+import mockup from "../assets/images/mockup.png";
+import bind from "../assets/images/om_bind.png";
+import tampon from "../assets/images/om_tampon.png";
+import selfcare from "../assets/images/om_selfcare.png";
+import info1 from "../assets/images/info.svg";
+import info1hover from "../assets/images/infohover.svg";
+import info2 from "../assets/images/info2.svg";
+import info2hover from "../assets/images/info2hover.svg";
+import info3 from "../assets/images/info3.svg";
+import info3hover from "../assets/images/info3hover.svg";
+import info4 from "../assets/images/info4.svg";
+import info4hover from "../assets/images/info4hover.svg";
+import info5 from "../assets/images/info5.svg";
+import info5hover from "../assets/images/info5hover.svg";
+import info6 from "../assets/images/info6.svg";
+import info6hover from "../assets/images/info6hover.svg";
+import Wave from "../components/Wave.astro";
+import Button from '../components/Button.astro';
+---
+
+<MainLayout title="Om pakken">
+<section>
+    <div class="md:grid md:grid-cols-2 ">
+          <div class="mb-m flex flex-col gap-xxs md:gap-s mx-xs md:mx-2xl md:mt-2xl ">
+                <h2 class="text-red-800 ">Nysgerrig på din <br> nye bedste ven?</h2>
+                <h4 class="text-red-700 titel">Få mere information <br> om indholdet i pakken</h4>
+          </div>
+          <Image class="hidden w-11/12 md:block  ml-auto" src={mockup} alt="mockup af pakke"/>
+    </div>
+
+    <div class="grid grid-rows-3 lg:grid-rows-4 gap-ml lg:grid-cols-3 lg:max-h-full   mx-xs  md:mx-2xl  lg:mt-[-20%]">
+        <div class="flex flex-row items-center lg:flex-col gap-sm lg:row-end-3 lg:row-start-1 point1">
+            <Image class="h-[150px] w-auto md:w-3/4 md:h-auto " src={bind} alt="bind"/>
+            <div>
+                <h4 class="text-blue-900">Pålidelige bind</h4>
+                <p class="text-red-950">Bløde, sikre og altid der, når du har brug for dem. Vores bind er designet til at give dig ro i sindet – uanset om du chiller på sofaen eller løber til bussen. Komfort møder pålidelighed.</p>
+            </div>
+        </div>
+
+        <div class="flex flex-row items-center lg:flex-col gap-sm  lg:row-start-2 lg:row-end-4 lg:col-start-2 lg:col-end-3 point2">
+            <Image class="h-[150px] order-last lg:order-first w-auto md:w-3/4 md:h-auto" src={tampon} alt="tampon"/>
+            <div class="">
+                <h4 class="text-blue-900">Komfortable tamponer</h4>
+                <p class="text-red-950">Små, diskrete og klar til at følge dig overalt. Vores tamponer er som din bedste ven - altid der, når du har brug for støtte. Slip for bekymringer og få friheden tilbage!       </p>
+            </div>
+        </div>
+
+        <div class="flex flex-row items-center lg:flex-col gap-sm lg:row-end-5 lg:row-start-3  lg:col-start-3 lg:col-end-4 point3">
+            <Image class="h-[150px] w-auto md:w-3/4 md:h-auto " src={selfcare} alt="selfcare"/>
+            <div class="">
+                <h4 class="text-blue-900">Self-care goodies</h4>
+                <p class="text-red-950">Bløde, sikre og altid der, når du har brug for dem. Vores bind er designet til at give dig ro i sindet – uanset om du chiller på sofaen eller løber til bussen. Komfort møder pålidelighed.</p>
+            </div>
+        </div>
+    </div>
+    
+</section>
+
+<div class=" ml-s lg:pl-s mt-sm md:ml-lg lg:mt-[-10%] flex flex-col md:row-start-3 md:row-end-4 md:col-start-1 md:col-end-3 mb-xl md:mb-4xl ">
+    <h5 class="text-blue-900 pb-xs md:pb-xs pl-xxs">Lyder det som noget for dig?</h5>
+</section>
+<div class="knap1">
+    <div class="hidden md:flex"><Button variant="primary" size="large" href="/abonner">Få abonnement</Button></div>
+    <div class="md:hidden flex"><Button variant="primary" size="medium" href="/abonner">Abonnér her</Button></div>
+</div>
+</div>
+
+<section class="section1">
+    <div class="rotate-180 overflow-clip w-auto"><Wave></Wave></div>
+    <section class="  bg-red-50/60 ">
+        <div class=" max-w-xl md:max-w-4xl lg:max-w-6xl md:mx-auto mx-sm md:grid lg:grid-cols-2 gap-sm ">
+       <h6 class="block pb-sm  lg:hidden">Klik på billederne og få mere viden</h6>
+          <div class="grid grid-cols-2 gap-xs pb-xs min-h-full  ">
+            <div class="img-box col-span-2">
+              <Image class="image1" src={info1} alt="info" />
+              <Image class="image2" src={info1hover} alt="info hover" />
+            </div>
+            <div class="img-box">
+              <Image class="image1" src={info2} alt="info" />
+              <Image class="image2" src={info2hover} alt="info hover" />
+            </div>
+            <div class="img-box">
+              <Image class="image1" src={info3} alt="info" />
+              <Image class="image2" src={info3hover} alt="info hover" />
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-xs pb-xs min-h-full ">
+            <div class="img-box col-span-2 md:order-last">
+              <Image class="image1 " src={info4} alt="info" />
+              <Image class="image2" src={info4hover} alt="info hover" />
+            </div>
+            <div class="img-box">
+              <Image class="image1" src={info5} alt="info" />
+              <Image class="image2" src={info5hover} alt="info hover" />
+            </div>
+            <div class="img-box">
+              <Image class="image1" src={info6} alt="info" />
+              <Image class="image2" src={info6hover} alt="info hover" />
+            </div>
+          </div>
+   </div>
+    </section>
+    <div class="overflow-clip w-auto"><Wave></Wave></div>
+  </section>
+  
+  <div class="mt-lg section2"><Steps></Steps></div>
+  
+  <section class="flex flex-col gap-ml items-center mt-ml mb-xl ">
+    <h3 class="text-red-800 text-center">Få en menstruationspakke,<br />som tager sig af dig</h3>
+    <div class="text-red-950 text-center flex flex-col gap-s lg:section3">
+      <p>Din cyklus, din komfort.</p>
+      <p>
+        Med et abonnement hos os, er der ingen stress, kun self-care.<br />
+        Tilmeld dig Period. abonnementet i dag, og mærk forskellen!
+      </p>
+    </div>
+    <div class="knap2"><Button variant="primary" size="large" href="/abonner">Abonnér</Button></div>
+  </section>
+  </MainLayout>
+  
+  <style>
+  .img-box {
+    max-height: 100%;
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    display: flex;
+    position: relative;
+  }
+  
+  .image1,
+  .image2 {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .image2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+  
+  .img-box:hover .image1 {
+    opacity: 0;
+  }
+  
+  .img-box:hover .image2 {
+    opacity: 1;
+  }
+  </style>
+
+   
+<script>
+	import { inView } from "motion";
+
+	const inviewelement = document.querySelector(".titel");
+	inView(
+		inviewelement , () => {
+			inviewelement.classList.add("animate__animated","animate__fadeIn", "animate__delay-1s")
+		})
+
+		const inviewelement1 = document.querySelector(".point1");
+	inView(
+		inviewelement1 , () => {
+			inviewelement1.classList.add("animate__animated","animate__fadeInUp", "animate__delay-2s")
+		})
+		
+		const inviewelement2 = document.querySelector(".point2");
+	inView(
+		inviewelement2 , () => {
+			inviewelement2.classList.add("animate__animated","animate__fadeInUp", "animate__delay-1s")
+		})
+
+		const inviewelement3 = document.querySelector(".point3");
+	inView(
+		inviewelement3 , () => {
+			inviewelement3.classList.add("animate__animated","animate__fadeInUp", "animate__delay-1s")
+		})
+
+		const inviewelement4 = document.querySelector(".knap1");
+	inView(
+		inviewelement4 , () => {
+			inviewelement4.classList.add("animate__animated","animate__fadeInUp", "animate__delay-1s")
+		})
+
+		const inviewelement5 = document.querySelector(".section1");
+	inView(
+		inviewelement5 , () => {
+			inviewelement5.classList.add("animate__animated","animate__fadeInUp", "animate__delay-1s")
+		})
+
+		const inviewelement6 = document.querySelector(".section2");
+	inView(
+		inviewelement6 , () => {
+			inviewelement6.classList.add("animate__animated","animate__fadeInUp", "animate__delay-1s")
+		})
+	
+		const inviewelement7 = document.querySelector(".section3");
+	inView(
+		inviewelement7 , () => {
+			inviewelement7.classList.add("animate__animated","animate__fadeInUp", "animate__delay-1s")
+		})
+
+		const inviewelement8 = document.querySelector(".knap2");
+	inView(
+		inviewelement8 , () => {
+			inviewelement8.classList.add("animate__animated","animate__fadeInUp", "animate__delay-1s")
+		})
+
+</script>
+  
